@@ -6,7 +6,7 @@ for i in range(11):
         numArray.append(i*j)
 print(numArray)
 
-winnum = random.randint(1, 101)
+winnum = random.randint(1, 100)
 while (True):
     try:
         yournum = int(input('Number please '))
@@ -21,5 +21,5 @@ while (True):
     elif yournum < winnum:
         print('Higher')
     else:
-        print('you win')
+        print('You win!')
         break
