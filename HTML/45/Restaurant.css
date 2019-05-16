@@ -4,12 +4,13 @@ html {
 
 body {
     background-color: greenyellow;
-   
     color: black;
     margin: auto;
     max-width: 800px;
     padding: 1em;
     width: 80%;
+    margin-top: 3em;
+    margin-bottom: 3em;
 }
 
 header {
@@ -67,3 +68,25 @@ video {
     box-sizing: border-box;
     height: 238px;
 }
+
+header, footer {
+    position: fixed;
+    text-align: center; 
+    background-color: white;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    top: 0;
+    height: 3em;
+}
+
+footer {
+    bottom: 0;
+    height: 3em;
+}
+
