@@ -1,0 +1,97 @@
+html {
+    background-image: url("back.png");
+
+}
+
+body {
+    background-color: greenyellow;
+    color: black;
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+}
+
+p {
+    font-size: 2rem;
+    text-shadow: 1px;
+    letter-spacing: 0rem;
+    transform: none;
+    font-family: fantasy;
+}
+
+p .ab{
+    position: absolute;
+    right: 12em;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    border: 5px solid black;
+    border-radius: 4px;
+    font-style: italic;
+}
+
+body a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+body a:link { 
+    color: black;
+}
+
+body a:visited {
+    color: purple;
+}
+
+body a:hover {
+    text-decoration: underline;
+}
+
+body a:focus {
+    color: blue;
+}
+
+body a:active {
+    color: blue
+}
+
+body img {
+   width: 200px;
+   height: 200px; 
+}
+
+video {
+    width: 33%;
+    padding: 6px;
+    box-sizing: border-box;
+    height: 238px;
+}
+
+header, footer {
+    position: fixed;
+    text-align: center; 
+    background-color: white;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    padding: 2em;
+}
+
+header {
+    background-image: url(back2.jpg);
+    top: 0;
+    height: 5rem;
+}
+
+footer {
+    background-image: url(back2.jpg);
+    bottom: 0;
+    height: 3rem;
+    text-align: right;
+}
+
