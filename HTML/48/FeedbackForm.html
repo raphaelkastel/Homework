@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            width: 80%;
+            margin: auto;
+            background-color: rgb(127, 214, 255);
+        }
+
+        input:not([type="submit"]):not([type="reset"]),
+        textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: .5em;
+        }
+
+        a {
+            border: 1px solid black;
+            background-color: whitesmoke;
+
+        }
+    </style>
+</head>
+
+<body>
+    <form action="processForm.php" method="post">
+        <label for="firstName">First Name:</label><input name="firstName" id="firstName"
+            placeholder="Enter your first name here" required minlength="1" maxlength="20">
+        <label for="lastName"></label>Last Name:<input name="lastName" id="lastName"
+            placeholder="Enter your last name here" required minlength="1" maxlength="20">
+        <label for="email"></label>Email:<input type="email" name="email" id="email"
+            placeholder="Enter your email here">
+        <label for="date"></label>Date:<input type="date" name="date" id="date" placeholder="Enter the date here">
+        <label for="rating"></label>Rating:<input type="range" name="rating" id="rating" min="1" max="5">
+        <label for="comments"></label>Comments:
+        <textarea placeholder="Please write a comment here">Default text</textarea>
+        <input type="submit">
+        <input type="reset">
+        <a href="Index.html">Home</a>
+</body>
+
+</html>
