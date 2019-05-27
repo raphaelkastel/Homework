@@ -1,0 +1,32 @@
+﻿Q 1: grid-column-start: 3;
+Q 2: grid-column-start: 5;
+Q 3: grid-column-end: 4;
+Q 4: grid-column-end: 2;
+Q 5: grid-column-end: -2;
+Q 6: grid-column-end: -2;
+Q 7: grid-column-end: span 2;
+Q 8: grid-column-end: span 5;
+Q 9: grid-column-start: span 3;
+Q 10: grid-column: 4 / 6;
+Q 11: grid-column: span 3 / 5;
+Q 12: grid-row-start: 3;
+Q 13: grid-row: 3/6;
+Q 14: grid-row: 5;
+grid-column: 2;
+Q 15: grid-row: span 5;
+grid-column: 2/6;
+Q 16: grid-area: 1/ 2 / 4 / 6;
+Q 17: grid-area: 2/ 3 / 5 / 6;
+Q 18: order: 1;
+Q 19: order: -1;
+Q 20: grid-template-columns: 50%;
+Q 21: grid-template-columns: repeat(8, 12.5%);
+Q 22: grid-template-columns: 100px 3em 40%;
+Q 23: grid-template-columns: 1fr 5fr;
+Q 24: grid-template-columns: 50px repeat(3, 3fr) 50px;
+Q 25: grid-template-columns: 75px 3fr 2fr;
+Q 26: grid-template-rows: 12.5px 12.5px 12.5px 12.5px 1fr;
+Q 27: grid-template: 60% / 200px;
+Q 28: grid-template: 1fr 50px / 20% 1fr;
+ 
+☼♋p♒♋♏● ♋⬧⧫♏●
