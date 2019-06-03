@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz page</title>
+    <style>
+        article {
+            padding: 2em;
+            grid-area: article;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "ah1"
+                "div"
+                "div1"
+                "div2"
+                "div3"
+
+        }
+
+        #ah1 {
+            grid-area: ah1;
+
+        }
+
+        #div {
+            grid-area: div;
+
+        }
+
+        #div1 {
+
+            grid-area: div1;
+
+
+
+        }
+
+        #div1 img {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        #div2 video {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        #div3 img {
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        #div2 {
+
+
+
+            grid-area: div2;
+
+        }
+
+        #div3 {
+
+            grid-area: div3;
+
+        }
+
+        div h2 {
+            text-align: center;
+        }
+
+        label {
+            width: 100%;
+        }
+
+        #form {
+            text-align: center;
+            grid-area: form;
+            width: 100%;
+            background: lightgray;
+            padding-bottom: 5px;
+            border-radius: 4px;
+
+        }
+
+        #form div {
+            display: block;
+            padding: 5px;
+            text-align: center;
+
+        }
+
+        input {
+            border-radius: 4px;
+
+            box-shadow: 4px 4px 4px black;
+
+        }
+
+        #nav {
+            grid-area: nav;
+            background-color: black;
+            width: 100%;
+            height: 2rem;
+            margin: auto;
+            left: 0;
+            right: 0;
+            position: fixed;
+            display: flex;
+            padding-left: 8%;
+            flex-direction: column;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        #list {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        a {
+            margin: 0 5px;
+        }
+
+        header {
+            margin-top: 2em;
+            padding-bottom: 1em;
+            display: grid;
+            width: 100%;
+            height: 8rem;
+            background-color: lightgray;
+            text-align: center;
+            grid-area: header;
+            justify-items: center;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+
+        }
+
+        header h1 {
+            text-transform: uppercase;
+        }
+
+
+        a:link {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+        body {
+            max-width: 1900px;
+            width: 100%;
+            display: grid;
+            margin: auto;
+            justify-content: center;
+            grid-template-columns: 1fr 10fr 1fr;
+            grid-template-areas:
+                ". nav ."
+                ". header ."
+                ". article ."
+                ". form ."
+                ". fin ."
+                ". table ."
+                ". abus ."
+                ". footer ."
+
+        }
+
+        #table {
+            grid-area: table;
+            border: 1px solid black;
+            border-collapse: collapse;
+            overflow-x: auto;
+            overflow-y: hidden;
+            max-width: 80%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        #table tr:hover {
+            background-color: blue;
+        }
+
+        #abus {
+            grid-area: abus;
+            padding-bottom: 2rem;
+        }
+
+        #fin {
+            grid-area: fin;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: lightcyan;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+
+        tfoot {
+            background-color: lightgray;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            text-align: right;
+            padding: .5em;
+
+        }
+
+        caption {
+            caption-side: top;
+            border: 1px solid black;
+            background-color: lightgray;
+            font-size: 3em;
+        }
+
+        tr td:last-child {
+            color: red;
+        }
+
+        #footer {
+            height: 2rem;
+            width: 100%;
+            background-color: black;
+            color: white;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 8%;
+        }
+
+        .italic {
+            font-style: italic;
+        }
+
+        .anchor {
+            position: relative;
+        }
+
+        .anchor a {
+            position: absolute;
+            left: 0px;
+            top: -60px;
+        }
+
+        @supports (-ms-ime-align: auto) {
+            #table {
+                overflow-x: scroll;
+            }
+        }
+
+        @media screen and (min-width: 800px) {
+
+            article {
+                padding: 2em;
+                grid-area: article;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-areas:
+                    "ah1 ah1 ah1"
+                    "div div div"
+                    "div1 div2 div3"
+
+            }
+
+            #ah1 {
+                grid-area: ah1;
+
+            }
+
+            #div {
+                grid-area: div;
+
+            }
+
+            #div1 {
+
+                grid-area: div1;
+                padding-right: 4px;
+                border-right: black solid 1px;
+
+            }
+
+            #div1 img {
+                width: 100%;
+                max-width: 1000px;
+            }
+
+            #div2 video {
+                width: 100%;
+                max-width: 1000px;
+            }
+
+            #div3 img {
+                width: 100%;
+                max-width: 1000px;
+            }
+
+            #div2 {
+
+                padding-left: 4px;
+                padding-right: 4px;
+                border-right: black solid 1px;
+                grid-area: div2;
+
+            }
+
+            #div3 {
+                padding-left: 4px;
+                grid-area: div3;
+
+            }
+
+            div h2 {
+                text-align: center;
+            }
+
+            #form {
+                text-align: center;
+                grid-area: form;
+                width: 100%;
+                background: lightgray;
+                padding-bottom: 1em;
+                border-radius: 4px;
+
+            }
+
+            input {
+                border-radius: 4px;
+                box-shadow: 4px 4px 4px black;
+
+            }
+
+            #form div {
+                text-align: center;
+                display: inline;
+                padding: 5px;
+
+            }
+        }
+
+        article h2 {
+            margin-top: -5px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav">
+        <ul id="list">
+            <li><a href="#aheader">Products </a></li>
+            <li> <a href="#tform">Sign up </a></li>
+            <li> <a href="#tfinancials">Financials </a></li>
+            <li> <a href="#tlabus">About Us</a></li>
+        </ul>
+
+    </nav>
+    <header id="header">
+        <h1>estuff</h1>
+        <h2>A <span class="italic">PCS</span> Company</h2>
+    </header>
+    <article>
+        <h2 id="ah1" class="anchor">
+            <a href=# id=aheader></a>
+            Products
+        </h2>
+        <div id="div">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quas perferendis adipisci possimus?
+        </div>
+
+        <div id="div1">
+            <h2>Computers</h2> <img src="macworld.jpg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
+            facilis
+            tempore atque quaerat at,
+            pariatur reprehenderit numquam, saepe corporis, repudiandae explicabo provident. Enim perferendis at
+            deleniti maxime tenetur debitis voluptas!
+        </div>
+
+        <div id="div2">
+            <h2>Choirs</h2> <video poster="shira.png" src="El Hanaar Hazeh.mp4" controls preload="auto"></video>Lorem
+            ipsum dolor sit amet,
+            consectetur adipisicing elit. Nobis facilis tempore atque quaerat at,
+            pariatur reprehenderit numquam, saepe corporis, repudiandae explicabo provident. Enim perferendis at
+            deleniti maxime tenetur debitis voluptas!
+        </div>
+
+        <div id="div3">
+            <h2>Candy</h2> <img src="candy.png"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis facilis
+            tempore atque quaerat at,
+            pariatur reprehenderit numquam, saepe corporis, repudiandae explicabo provident. Enim perferendis at
+            deleniti maxime tenetur debitis voluptas!
+        </div>
+
+
+    </article>
+    <div id="form" class="anchor">
+        <a href=# id=tform></a>
+        <h1>Sign up here!</h1>
+        <form action="processForm.php" method="post">
+            <div>
+                <label for="Name">Name:</label><input name="Name" id="Name" placeholder="Enter your name here" required
+                    minlength="1" maxlength="20">
+            </div>
+            <div>
+                <label for="email"></label>Email:<input type="email" name="email" id="email"
+                    placeholder="Enter your email here" required minlength="1" maxlength="30">
+
+            </div>
+            <div>
+                <input type="submit" value="Sign up!">
+            </div>
+    </div>
+    <div id="fin" class="anchor">
+        <a href=# id=tfinancials></a>
+        <h3>Financials</h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <table id="table">
+        <thead>
+            <caption>Weekly Report</caption>
+            <tr>
+                <th>Shut down notices</th>
+                <th>Days since last incident</th>
+                <th>Customer complaints</th>
+                <th>Repeat customers</th>
+                <th>FBI raids</th>
+                <th>Arrest warrants for the manager</th>
+                <th>Biohazard warning stickers on the window</th>
+                <th>Total Income</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>325</td>
+                <td>0</td>
+                <td>8276</td>
+                <td>0</td>
+                <td>21</td>
+                <td>37</td>
+                <td>472</td>
+                <td>-52082594383</td>
+            </tr>
+            <tr>
+                <td>356</td>
+                <td>0</td>
+                <td>8743</td>
+                <td>0</td>
+                <td>25</td>
+                <td>42</td>
+                <td>572</td>
+                <td>-59284594362</td>
+            </tr>
+            <tr>
+                <td>402</td>
+                <td>0</td>
+                <td>9572</td>
+                <td>0</td>
+                <td>31</td>
+                <td>57</td>
+                <td>842</td>
+                <td>-52082594383</td>
+            </tr>
+            <tr>
+                <td>803</td>
+                <td>0</td>
+                <td>16226</td>
+                <td>0</td>
+                <td>82</td>
+                <td>211</td>
+                <td>2823</td>
+                <td>-132083595366</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="7">Total</td>
+                <td>-999999999999</td>
+            </tr>
+        </tfoot>
+    </table>
+    <div id="abus" class="anchor">
+        <a href=# id=tabus></a>
+        <h3>About us</h3> Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro eligendi quae amet
+        cupiditate
+        deleniti sequi voluptatem voluptatibus, dolorum illo expedita aliquam quo voluptate illum voluptatum
+        aspernatur
+        odio sunt quidem asperiores quaerat tenetur alias dignissimos necessitatibus a iste. Laboriosam et
+        perspiciatis
+        ipsum consequuntur omnis enim accusantium, qui id veniam ratione beatae voluptatem? Est temporibus laborum
+        amet.
+        Repudiandae magni perferendis ipsam, unde aliquid officia voluptatibus iure temporibus modi odio tempore
+        obcaecati explicabo. Deserunt, consequatur itaque quod alias quisquam earum corrupti iure porro quos beatae
+        tempora veritatis reiciendis ipsam quia fugiat eveniet architecto natus distinctio voluptas nihil soluta,
+        perferendis unde placeat sit! Deserunt ad sapiente blanditiis repellat, dolore repudiandae laborum libero!
+        Ex
+        tempora voluptatum officia, magnam, repellat dolorum debitis necessitatibus soluta modi dolor suscipit qui
+        saepe. Maxime itaque consequatur provident in? Suscipit animi asperiores consequatur neque velit in
+        repellendus
+        eos voluptatem. Inventore voluptatum aspernatur illum ea, optio sunt unde et asperiores doloremque aut a,
+        excepturi pariatur repellat, recusandae sapiente eos consequuntur nostrum ipsa ipsam blanditiis provident
+        nemo
+        veritatis doloribus. Veritatis repudiandae pariatur enim aliquid ipsam doloremque perferendis, est eius
+        animi
+        dolor cum ipsum unde, sint deserunt praesentium dolore fuga minus sunt possimus. Expedita nihil magni in
+        cumque
+        delectus laudantium praesentium vel, magnam quia? Dolor deserunt dolores impedit, corrupti possimus officiis
+        praesentium qui est molestiae, accusamus, nobis eos doloremque dolore hic autem nam cum mollitia tempora?
+        Amet,
+        odio recusandae. Excepturi est doloribus quis consequatur culpa autem molestias ducimus et sunt fugiat,
+        tempore,
+        mollitia expedita labore vitae placeat. Exercitationem impedit quisquam amet, officiis atque repellendus?
+    </div>
+    <footer id="footer">&copy;PCS 2019</footer>
+</body>
+
+</html>
