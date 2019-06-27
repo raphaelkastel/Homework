@@ -30,6 +30,14 @@ const ICM = (function () {
     let debt = 0;
 
     return {
+        getIntrestRate: function getIntrestRate() {
+            return intrestRate;
+        },
+
+        getNumOfYears: function getNumOfYears() {
+            return numOfYears;
+        },
+
         setIntrestRate: function setIntrestRate(num) {
             intrestRate = num;
         },
@@ -38,13 +46,24 @@ const ICM = (function () {
             numOfYears = num;
         },
 
+        checkDebt: function checkDebt(num) {
+            if (debt > 10000) {
+                return "The don sends his regards.";
+            }
+            if (debt > 1000) {
+                return "The mafia wants to know your location.";
+            }
+            return "Im sure you will pay promptly.";
+        },
+
         futureLoanSharkDues: function futureLoanSharkDues(num) {
             debt = num;
             for (let i = 0; i < numOfYears; i++) {
 
                 debt = debt * intrestRate;
             }
-            return debt;
+
+            return Math.round(debt);
         },
 
     };
@@ -55,4 +74,6 @@ console.log(DOW.getDayIndex('Sunday'));
 const Mydebt = ICM;
 Mydebt.setIntrestRate(1.25);
 Mydebt.setNumOfYears(10);
-console.log(Mydebt.futureLoanSharkDues(100));
+console.log("In", Mydebt.getNumOfYears(), "years you will owe", Mydebt.futureLoanSharkDues(150), "Turkish lira to the mob.");
+console.log(Mydebt.checkDebt());
+
