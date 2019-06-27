@@ -1,3 +1,4 @@
+// You know it's getting cold when a politician's hands are in his own pockets.
 window.myApp = window.myApp || {};
 window.myApp.Utils = (function (Utils) {
     'use strict';
