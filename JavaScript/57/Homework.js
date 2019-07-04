@@ -12,13 +12,13 @@
         balance: 0,
     };
 
-    function deposit(value) {
+    function transaction(value) {
         this.balance += value;
         console.log(this.accountId, this.balance);
     }
 
-    deposit.call(bank, 100);
-    deposit.call(bank2, 100);
-    deposit.call(bank, 100);
+    transaction.call(bank, 100);
+    transaction.call(bank2, 100);
+    transaction.call(bank, -100);
 
 }());
