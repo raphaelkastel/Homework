@@ -37,3 +37,5 @@ count2.increment();
 count2.increment();
 count2.increment();
 console.log(count2.getCount());
+console.log(count2.getNumOfCount());
+
