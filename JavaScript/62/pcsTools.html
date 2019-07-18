@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h1 id="donald">Donald Trump</h1>
+    <h1 id="bernie">Bernie Sanders</h1>
+    <script src="pcsTools2.js"></script>
+    <script src="Clock.js"></script>
+
+    <script>
+        const donald = pcs('donald')
+            .css('color', 'green')
+            .click(event => console.log('The Donald was clicked!', event));
+        console.log(donald.css('color'));
+        const bernie = pcs('bernie');
+        bernie.css('color', 'red');
+        console.log(bernie.css('color'));
+        bernie.changeColor(1000,2000);
+        bernie.data('foo', 10);
+        console.log(bernie.data('foo'));
+        donald.data('something','something else');
+        console.log(donald.data('something'));
+    </script>
+</body>
+
+</html>
