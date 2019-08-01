@@ -1,0 +1,14 @@
+[
+    {
+        "firstName": "Donald",
+        "lastName": "Trump",
+        "address": "1600 Pennsylvania Ave",
+        "email": "dtrump@whitehouse.gov"
+    },
+    {
+        "firstName": "Mike",
+        "lastName": "Pence",
+        "address": "1600 Pennsylvania Ave",
+        "email": "mpence@whitehouse.gov"
+    }
+]

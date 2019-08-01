@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #spinner {
+            width: 1em;
+            vertical-align: middle;
+            display: none;
+        }
+
+        table {
+            width: 80%;
+            margin: auto;
+            border-collapse: collapse;
+        }
+
+        thead {
+            text-align: center;
+        }
+
+        td,
+        th {
+            border: 1px solid black;
+            padding: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="load">load</button>
+    Load contacts: <input id="filename">
+    <img id="spinner" src="images/spinner.gif" alt="spinner" />
+
+    <pre id="output"></pre>
+    <table id=tab>
+        <tbody>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Address</th>
+                <th>Email</th>
+            </tr>
+            
+        </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="homework.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Waffles",
+        "pic": "waffles.jpg",
+        "url": "https://www.allrecipes.com/recipe/22180/waffles-i/",
+        "ing": [
+            "ing 1",
+            "ing 2",
+            "ing 3"
+        ],
+        "id": "Waffles"
+    },
+    {
+        "name": "French toast",
+        "pic": "french.jpg",
+        "url": "https://www.foodnetwork.com/recipes/robert-irvine/french-toast-recipe-1951408",
+        "ing": [
+            "ing 1",
+            "ing 2",
+            "ing 3"
+        ],
+        "id": "French-toast"
+    }
+]
