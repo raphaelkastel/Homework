@@ -15,12 +15,12 @@
             videostoplay.append(`Choose a video: `);
             for (let i = 0; i < rt.length; i++) {
                 const elem = Object.values(rt[i]);
-                if(elem[1] === ""){
+                if (elem[1] === "") {
                     elem[1] = elem[4];
                 }
                 videostoplay.append(`<div class="video" id = ${elem[3]} ><img src="${elem[1]}" alt="img"><div>${elem[0]}</div></div> `);
-            
-        }
+
+            }
         })
         .catch(err => {
             console.log(err);
@@ -42,14 +42,16 @@
                             const elem = Object.values(rt[i]);
 
                             if (id == rt[i].id) {
-                                 playing.append(`<object type="application/x-shockwave-flash" style="width:450px; height:366px;" data="//www.youtube.com/v/${elem[2]}?color2=FBE9EC&amp;rel=0&amp;showsearch=0&amp;showinfo=0&amp;version=3&amp;modestbranding=1">
-                                <param name="movie" value="//www.youtube.com/v/${elem[2]}?color2=FBE9EC&amp;rel=0&amp;showsearch=0&amp;showinfo=0&amp;version=3&amp;modestbranding=1" />
-                                <param name="allowFullScreen" value="true" />
-                                <param name="allowscriptaccess" value="always" />
-                                </object>
+                                playing.append(`<object type="application/x-shockwave-flash" style="width:450px; height:366px;" data="//www.youtube.com/v/${elem[2]}?color2=FBE9EC&amp;autoplay=1&amp;version=3">      
+                                  <param name="movie" value="//www.youtube.com/v/${elem[2]}?color2=FBE9EC&amp;autoplay=1&amp;version=3" />
+                                  <param name="allowFullScreen" value="true" />
+                                  <param name="allowscriptaccess" value="always" />
+                                  </object>
                             <h1>${elem[0]}</h1>`);
 
                                 playing.show();
+
+
                             }
 
                         }
