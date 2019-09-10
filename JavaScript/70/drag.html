@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: auto;
+            left: auto;
+        }
+
+        html,
+        body,
+        #sidebar,
+        #pic {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #sidebar {
+            float: left;
+            width: 25%;
+            overflow-y: scroll;
+
+            box-sizing: border-box;
+            padding-left: 1em;
+        }
+
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #sidebar li {
+            margin-bottom: 1em;
+            cursor: pointer;
+
+        }
+
+        #sidebar li img {
+            height: 75px;
+        }
+
+        #sidebar img {
+            width: auto;
+            vertical-align: middle;
+            margin-right: 2px;
+        }
+
+        #pic {
+            float: right;
+            width: 75%;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+
+        }
+
+        #pic img {
+            padding-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <aside id="sidebar">
+        <div id="controls">
+            <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" width="0" height="0"
+                type="text/html" src="http://www.youtube.com/v/sCxv2daOwjQ?version=3&autoplay=1&loop=1&playlist=sCxv2daOwjQ"
+                frameborder="0"></iframe>
+        </div>
+        <ul>
+            <li><img id="0" class="box" src="imagesAXL7YP4N-removebg-preview.png"></li>
+            <li><img id="1" class="box" src="imagesDYHF24X7-removebg-preview.png"></li>
+            <li><img id="2" class="box" src="untitled.png"></li>
+            <li><img id="3" class="box" src="untitled2.png"></li>
+            <li><img id="4" class="box" src="untitled3.png"></li>
+            <li><img id="5" class="box" src="Untitled4.png"></li>
+        </ul>
+    </aside>
+    <div id=pic><img src="a0bb21f1d3a21172b71db7426e84436b.jpg"></div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="drag.js"></script>
+</body>
+
+</html>
