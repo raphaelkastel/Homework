@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Recipe from "./Recipe";
 import RI from "./RI";
 import Navbar from "./Navbar";
 
@@ -23,15 +22,7 @@ class App extends Component {
     selectedRecipeid: 0
   };
 
-  getRecipes() {
-    return this.state.recipes.map(recipe => (
-      <Recipe
-        key={recipe.id}
-        recipe={recipe}
-        setRecipe={this.setRecipe.bind(this)}
-      />
-    ));
-  }
+ 
 
   setRecipe(recipe) {
     this.setState({
@@ -58,7 +49,6 @@ class App extends Component {
   }
 
   render() {
-    const Recipes = this.getRecipes();
 
     return (
       <BrowserRouter>
