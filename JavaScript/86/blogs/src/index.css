@@ -1,0 +1,15 @@
+body {
+  width: 80%;
+  margin: auto;
+}
+
+.loading {
+  text-align: center;
+  font-style: italic;
+}
+
+.error {
+  text-align: center;
+  color: red;
+}
+

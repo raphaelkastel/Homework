@@ -1,0 +1,21 @@
+.post .title {
+    font-style: italic;
+}
+
+.post {
+    margin-bottom: 1em;
+}
+
+.next {
+    float: right;
+}
+
+.comments {
+    border: 1px solid black;
+    font-size: x-small;
+}
+
+.comments-status {
+    text-align: left;
+    font-size: x-small;
+}
