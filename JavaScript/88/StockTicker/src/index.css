@@ -1,0 +1,29 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+
+.blog {
+    padding-bottom: 10px;
+}
+.post {
+    padding-bottom: 10px;
+}
+.Comp{
+    text-align: left;
+}
+.Stock{
+    text-align: left;
+}
+.MuiAutocomplete-root{
+    display: inline-block;
+}
+.input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button{
+    margin-left: 10px;
+}
