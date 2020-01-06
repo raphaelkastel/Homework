@@ -1,0 +1,6 @@
+<h1>Catagories</h1>
+<ul>
+  <li *ngFor="let cat of catlist.categories; let i = index">
+    <app-catagory [catagory] = 'cat'></app-catagory>
+  </li>
+</ul>

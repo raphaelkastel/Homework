@@ -1,0 +1,11 @@
+<button (click)="toggleDisplay(i)">{{ catagory.title }}</button>
+<div *ngIf="catagory.isShow">
+  <div *ngIf="catagory.items; else other_content">
+    <div *ngFor="let item of catagory.items">
+      <ul>
+        <li>{{ item.name }} - {{ item.price | currency }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<ng-template #other_content>No items in catagory</ng-template>
