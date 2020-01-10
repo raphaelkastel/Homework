@@ -1,0 +1,5 @@
+<h1>PCS Weather</h1>
+<input #zipInput /><button (click)="setZip(zipInput.value)">Search</button>
+<div *ngIf="myZip!=''">
+<app-weather [zip] = "myZip" ></app-weather>
+</div>
