@@ -1,0 +1,5 @@
+<ul>
+    <li *ngFor="let blog of blogs | async">
+        <app-blog-info [blog]="blog"></app-blog-info>
+    </li>
+</ul>

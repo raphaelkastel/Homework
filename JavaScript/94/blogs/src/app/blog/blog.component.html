@@ -1,0 +1,16 @@
+<ul>
+  <li *ngFor="let post of slicedPosts">
+    <h2>{{ post.title }}</h2>
+    <p>{{ post.body }}</p>
+  </li>
+</ul>
+<div *ngIf="posts?.length">
+  <button [disabled]="postIndex === 0" (click)="handlePrevious()">prev</button>
+  <button
+    [disabled]="postIndex > posts.length - NUM_POSTS"
+    class="next"
+    (click)="handleNext()"
+  >
+    next
+  </button>
+</div>

@@ -1,0 +1,14 @@
+<div class="row d-flex flex-row-reverse">
+    <form class="form-inline" (submit)="$event.preventDefault()">
+        <input #zipInput type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter zip"
+            (change)="getWeather(zipInput.value, unitsSelect.value)">
+        <select #unitsSelect class="form-control mb-2 mr-sm-2" (change)="getWeather(zipInput.value, unitsSelect.value)">
+            <option value="imperial">Fahrenheit</option>
+            <option value="metric">Celsius</option>
+            <option value="">Kelvin</option>
+        </select>
+    </form>
+</div>
+<div *ngIf="weather | async as weather">
+    <app-weather [weather]="weather"></app-weather>
+</div>
