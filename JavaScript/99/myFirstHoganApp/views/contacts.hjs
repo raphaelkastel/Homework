@@ -1,0 +1,7 @@
+<p>Welcome to {{ title }}</p>
+
+<ul>
+  {{#contacts}}
+  <li>{{name}}</li>
+  {{/contacts}}
+</ul>
