@@ -1,0 +1,8 @@
+<p>Welcome to {{ title }}</p>
+<form>
+    <label>Name
+        <input type="text" name="name" value="{{name}}" />
+    </label>
+    <button>submit</button>
+</form>
+<hr />
