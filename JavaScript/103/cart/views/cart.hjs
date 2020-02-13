@@ -1,0 +1,22 @@
+<a class="btn btn-primary" href="/" role="button">Home</a>
+<hr/>
+ <div class="card-header text-center my-1 px-0 ">Your total comes to: {{total}}</div>
+<div class="card-deck mb-3 text-center">
+  {{#items}}
+  <div class="card mb-4 shadow-sm">
+      
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">{{name}}</h4>
+    </div>
+    <div class="card-body item">
+      <img class="img-fluid" src="{{img}}" alt={{name}} />
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>{{description}}</li>
+        <li>Price: {{price}}</li>
+        <li>quantity: {{quantity}}</li>
+        <li>subtotal: {{subtotal}}</li>
+      </ul>
+    </div>
+  </div>
+  {{/items}}
+</div>
