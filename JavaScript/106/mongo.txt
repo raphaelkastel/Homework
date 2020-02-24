@@ -1,0 +1,101 @@
+Microsoft Windows [Version 10.0.18363.657]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\slubo>mongo
+MongoDB shell version v4.2.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("388100e3-3af4-43e4-8fcb-a798c826cb6d") }
+MongoDB server version: 4.2.3
+Server has startup warnings:
+2020-02-20T08:24:11.221-0500 I  CONTROL  [initandlisten]
+2020-02-20T08:24:11.221-0500 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2020-02-20T08:24:11.221-0500 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2020-02-20T08:24:11.222-0500 I  CONTROL  [initandlisten]
+1 test> use blog
+switched to db blog
+2 blog> db.posts.insertMany([{
+... title: 'Post #1',
+... content: 'This is post #1',
+... author: 'me',
+... date: new Date()
+... },{
+... ... title: 'Post #1',
+... ... content: 'This is post #1',
+... ... author: 'me',
+... ... date: new Date()
+... ... }]
+... )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("5e531f8a3bc696bec81d4766"),
+                ObjectId("5e531f8a3bc696bec81d4767")
+        ]
+}
+3 blog> db.posts.find().pretty()
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4766"),
+        "title" : "Post #1",
+        "content" : "This is post #1",
+        "author" : "me",
+        "date" : ISODate("2020-02-24T00:57:46.069Z")
+}
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4767"),
+        "title" : "Post #1",
+        "content" : "This is post #1",
+        "author" : "me",
+        "date" : ISODate("2020-02-24T00:57:46.069Z")
+}
+4 blog> db.posts.updateOne({_id: ObjectId("5e531f8a3bc696bec81d4767")}, {$set: {title: 'Post #2', content: 'This is post #2', author: 'you', date: new Date()}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+5 blog> db.posts.find().pretty()
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4766"),
+        "title" : "Post #1",
+        "content" : "This is post #1",
+        "author" : "me",
+        "date" : ISODate("2020-02-24T00:57:46.069Z")
+}
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4767"),
+        "title" : "Post #2",
+        "content" : "This is post #2",
+        "author" : "you",
+        "date" : ISODate("2020-02-24T00:59:18.283Z")
+}
+6 blog> db.posts.updateOne({_id: ObjectId("5e531f8a3bc696bec81d4766")}, {$push: {comments: {
+... content: 'This is a comment on post #1',
+... author: 'Joe Biden',
+... date: new Date()
+... }}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+7 blog> db.posts.find().pretty()
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4766"),
+        "title" : "Post #1",
+        "content" : "This is post #1",
+        "author" : "me",
+        "date" : ISODate("2020-02-24T00:57:46.069Z"),
+        "comments" : [
+                {
+                        "content" : "This is a comment on post #1",
+                        "author" : "Joe Biden",
+                        "date" : ISODate("2020-02-24T01:41:37.010Z")
+                }
+        ]
+}
+{
+        "_id" : ObjectId("5e531f8a3bc696bec81d4767"),
+        "title" : "Post #2",
+        "content" : "This is post #2",
+        "author" : "you",
+        "date" : ISODate("2020-02-24T00:59:18.283Z")
+}
+{
+        "_id" : ObjectId("5e53284810f09e38f81f8df3"),
+        "title" : "Bernie is Winning!",
+        "content" : "Minnie Mike cant win!",
+        "author" : "Donald Trump",
+        "date" : ISODate("2020-02-24T01:35:04.857Z")
+}

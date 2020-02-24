@@ -1,0 +1,11 @@
+
+
+  <div id="NBbuttons">
+  <button id="loadMore">More</button>
+  <input type=hidden value="{{page}}" name="page" id="page" />
+</div>
+<div id="addComment">
+  <textarea id="comment_content"></textarea>
+  <button id="add">add comment</button>
+  <button id="cancel">cancel</button>
+</div>

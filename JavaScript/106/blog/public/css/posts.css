@@ -1,0 +1,21 @@
+.comments {
+  border: 1px solid;
+  font-size: .8em
+}
+
+.comments h3, .comments h4 {
+  margin: 0;
+}
+
+.comments h3 {
+  color: blue;
+}
+
+#addComment {
+  display: none;
+}
+
+#comment_content {
+  width: 100%;
+  box-sizing: border-box;
+}

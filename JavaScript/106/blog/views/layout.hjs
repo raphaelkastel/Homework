@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/blog.css" rel="stylesheet">
+  {{#css}}
+  <link href="css/{{.}}.css" rel="stylesheet">
+  {{/css}}
+  <title>Document</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>{{title}}</h1>
+    <h2>{{subtitle}}</h2>
+    {{#links}}
+    <a href="{{url}}">{{text}}</a>
+    {{/links}}
+  </header>
+
+  {{> content}}
+
+  <script src="javascript/jquery-3.4.1.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  {{#scripts}}
+  <script src="javascript/{{.}}.js"></script>
+  {{/scripts}}
+</body>
+
+</html>
